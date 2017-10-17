@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="newspaper" class="ie.cit.soft8027.saq3.domain.Newspaper">
+		<constructor-arg value="The CIT Times"/>	
+		<constructor-arg>
+			<set>
+				<ref bean="sportsEditor"/>
+				<ref bean="entertainmentEditor"/>
+				<ref bean="businessEditor"/>
+				<ref bean="newsEditor"/>
+			</set>
+		</constructor-arg>
+	</bean>
+
+	<bean id="sportsEditor" class="ie.cit.soft8027.saq3.domain.Editor">
+		<constructor-arg value="Sports"/>
+		<constructor-arg value="Jim"/>
+		<constructor-arg value="Harrington"/>
+		<constructor-arg value="jh@cittimes.ie"/>
+	</bean>
+
+	<bean id="entertainmentEditor" class="ie.cit.soft8027.saq3.domain.Editor">
+		<constructor-arg value="Entertainment"/>
+		<constructor-arg value="John"/>
+		<constructor-arg value="Buzzard"/>
+		<constructor-arg value="jb@cittimes.ie"/>
+	</bean>
+
+	<bean id="businessEditor" class="ie.cit.soft8027.saq3.domain.Editor">
+		<constructor-arg value="Business"/>
+		<constructor-arg value="Jackie"/>
+		<constructor-arg value="Greatguns"/>
+		<constructor-arg value="jg@cittimes.ie"/>
+	</bean>
+	
+	<bean id="newsEditor" class="ie.cit.soft8027.saq3.domain.Editor">
+		<constructor-arg value="News"/>
+		<constructor-arg value="Alice"/>
+		<constructor-arg value="O'Leary"/>
+		<constructor-arg value="aol@cittimes.ie"/>
+	</bean>
+	
+</beans>
